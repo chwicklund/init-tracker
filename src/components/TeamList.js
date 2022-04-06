@@ -7,4 +7,6 @@ class TeamList extends React.Component {
         );
     }
 }
+
 export default TeamList;
+
