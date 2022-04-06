@@ -9,13 +9,19 @@ const App = () => {
             <div className="row">
 
                 <div className="col-sm-4">
-                    <TeamList />
+                    <TeamList
+                        title="Players"
+                        stateList="players"
+                        characterType="Player"/>
                 </div>
                 <div className="col-sm-4">
                     <InitiativeList />
                 </div>
                 <div className="col-sm-4">
-                    <TeamList />
+                    <TeamList
+                        title="Enemies"
+                        stateList="enemiess"
+                        characterType="Enemy"/>
                 </div>
             </div>
         </div>
