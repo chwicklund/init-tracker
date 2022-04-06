@@ -12,7 +12,8 @@ const App = () => {
                     <TeamList
                         title="Players"
                         stateList="players"
-                        characterType="Player"/>
+                        characterType="Player"
+                    />
                 </div>
                 <div className="col-sm-4">
                     <InitiativeList />
@@ -20,8 +21,9 @@ const App = () => {
                 <div className="col-sm-4">
                     <TeamList
                         title="Enemies"
-                        stateList="enemiess"
-                        characterType="Enemy"/>
+                        stateList="enemies"
+                        characterType="Enemy"
+                    />
                 </div>
             </div>
         </div>
