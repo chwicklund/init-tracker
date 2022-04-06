@@ -2,15 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { BrowserRouter, Router } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import App from '.components/App';
+import App from './components/App';
+import reducers from './reducers';
 
 ReactDOM.render(
-    <Provider>
+    <Provider store={createStore(reducers)}>
         <BrowserRouter>
-            <Route path="/" exact component={App} />
+            <Routes>
+                <Route path="/" element={<App />} />
+            </Routes>
         </BrowserRouter>
     </Provider>,
-    document.querySelector('#root'),
-)
+    document.querySelector('#root')
+);
