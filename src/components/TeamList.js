@@ -3,7 +3,7 @@ import React from 'react';
 class TeamList extends React.Component {
     render() {
         return (
-            <h2>Tea, List</h2>
+            <h2>Team List</h2>
         );
     }
 }
