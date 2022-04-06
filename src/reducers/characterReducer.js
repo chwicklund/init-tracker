@@ -18,7 +18,7 @@ const DEFAULT_STATE = {
     enemies: [],
 };
 
-const characterReducer = (state = {}, action) => {
+const characterReducer = (state = DEFAULT_STATE, action) => {
     return state;
 };
 
