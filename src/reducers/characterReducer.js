@@ -20,7 +20,7 @@ const DEFAULT_STATE = {
 
 const sortCharacters = (state) => {
     let newState = {
-        characters: [...state.characters],
+        characters: [ ...state.characters ],
         players: state.characters.filter(char => char.type === 'player'),
         enemies: state.characters.filter(char => char.type === 'enemy'),
     };
@@ -29,7 +29,23 @@ const sortCharacters = (state) => {
 };
 
 const characterReducer = (state = sortCharacters(DEFAULT_STATE), action) => {
-    return state;
+    switch (action.type) {
+        case 'ADD_CHARACTER':
+            const character = action.payload;
+            character.id = generateID();
+            state.characters.push(character);
+            return sortCharacters(state);
+
+        case 'REMOVE_CHARACTER':
+            const { id } = action.payload;
+            state.characters = state.characters.filter(char => {
+                return char.id !== id;
+            });
+            return sortCharacters(state);
+
+        default:
+            return state;
+    }
 };
 
 export default characterReducer;
