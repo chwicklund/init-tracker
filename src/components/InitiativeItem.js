@@ -1,22 +1,22 @@
 import React from 'react';
 
 const InitiativeItem = (props) => {
-    const { name, initiative, isCurrentTurn } = props;
+  const { name, initiative, isCurrentTurn } = props;
 
-    let classNames = 'list-group-item d-flex justify-content-between align-items-center';
+  let classNames = 'list-group-item d-flex justify-content-between align-items-center';
 
-    if (isCurrentTurn) {
-        classNames = classNames.concat(' active');
-    }
+  if (isCurrentTurn) {
+    classNames = classNames.concat(' active');
+  }
 
-    return (
-        <li className={classNames}>
-            { name }
-            <span className="badge badge-primary badge-pull">
+  return (
+    <li className={classNames}>
+      { name }
+      <span className="badge badge-primary badge-pull">
         { initiative }
       </span>
-        </li>
-    );
+    </li>
+  );
 };
 
 export default InitiativeItem;

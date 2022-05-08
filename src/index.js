@@ -8,12 +8,12 @@ import App from './components/App';
 import reducers from './reducers';
 
 ReactDOM.render(
-    <Provider store={createStore(reducers)}>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<App />} />
-            </Routes>
-        </BrowserRouter>
-    </Provider>,
-    document.querySelector('#root')
+  <Provider store={createStore(reducers)}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+      </Routes>
+    </BrowserRouter>
+  </Provider>,
+  document.querySelector('#root')
 );
